@@ -2,6 +2,7 @@ from replit import clear
 import os
 # HINT: You can call clear() to clear the output in the console.
 from art import logo,item,text
+os.system('clear)
 print(text)
 print("\n")
 print(logo)
