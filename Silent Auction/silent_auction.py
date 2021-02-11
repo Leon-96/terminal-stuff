@@ -1,7 +1,8 @@
 from replit import clear
 import os
-# HINT: You can call clear() to clear the output in the console.
+import pyfiglet
 from art import logo,item,text
+os.system('clear')
 print(text)
 print("\n")
 print(logo)
@@ -22,7 +23,8 @@ def add_to_dict():
         bid = int(input("Enter your bid amount : $"))
         print("\n")
         bids[name] = bid
-        done = input("Are you done?If yes type done : ")
+        done = input(r"Are you done?If yes type 'done' or if not type 'no' : ")
+        print("\n")
 
         if done == "done":
             ok = False
@@ -38,7 +40,7 @@ def add_to_dict():
             print(item)
         else:
             print("error incorrect option")
-            done = input("Are you done?If yes type 'done' or if not type 'no' : ")
+            done = input(r"Are you done?If yes type 'done' or if not type 'no' : ")
             print("\n")
 
 
@@ -47,3 +49,8 @@ add_to_dict()
 print("The highest bid amount is : $", max((bids.values())), "   by : ",
       (list(bids.keys())[list(bids.values()).index(max((bids.values())))]))
 
+result = pyfiglet.figlet_format(str(list(bids.keys())[list(bids.values()).index(max((bids.values())))]),font="doom")
+result1 = pyfiglet.figlet_format(f"$ {str(max((bids.values())))}",font="doom")
+print(result,"\n")
+
+print(result1,"\n")
